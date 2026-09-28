@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8" />
+	<title>NexTech Electronics : BUY PRODUCT</title>
+	<link rel="stylesheet" href="" th:href="@{/css/BuyProduct.css}" />
+</head>
+
+<body>
+	<a href="/login" class="back">Back</a>
+
+	<div class="welcome">
+		<h2>Welcome back, <span th:text="${name}"></span></h2>
+	</div>
+
+	<div class="searchBox">
+		<form action="" th:action="@{/product/search}" method="post" class="searchInput">
+			<h1>Find a Product</h1>
+			<input type="text" name="productName" required placeholder="Enter the product name...">
+			<button type="submit">Search</button><br />
+			<small class="errorText" th:text="${message}"></small>
+		</form>
+
+		<div th:if="${product!=null}" class="details">
+			<form action="" th:action="@{/product/order}" th:object="${product}" method="post">
+				<h3>Order this product</h3>
+				Product Name :
+				<input type="text" value="" name="oName" th:value="${product.pname}" readonly /><br />
+				Product Price :
+				<input type="text" value="" name="oPrice" th:value="${product.pprice}" readonly /><br />
+				Quantity :
+				<input type="number" placeholder="Minimum: 1" min="1" name="oQuantity" /><br />
+
+				<button type="submit">Order Now</button>
+			</form>
+		</div>
+
+		<div th:if="${orders!=null}" class="details">
+			<h2>Your Orders</h2>
+			<table>
+				<tr>
+					<th>Product_Name</th>
+					<th>Product_Price</th>
+					<th>Product_Quantity</th>
+					<th>Total_Ammount</th>
+					<th>Date</th>
+				</tr>
+				<tr th:each="order :${orders}">
+					<td th:text="${order.oName}"></td>
+					<td th:text="${order.oPrice}"></td>
+					<td th:text="${order.oQuantity}"></td>
+					<td th:text="${order.totalAmmout}"></td>
+					<td th:text="${order.orderDate}"></td>
+
+				</tr>
+			</table>
+		</div>
+	</div>
+</body>
+
+</html>

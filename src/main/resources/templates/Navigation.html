@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexTech Electronics</title>
+    <link rel="stylesheet" href="" th:href="@{/css/Navigation.css}">
+    <link rel="stylesheet" href="" th:href="@{/css/Home.css}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <nav th:fragment="navbar()">
+        <ul>
+            <li>
+                <a href="/home" class="brand">
+                    <img src="/Images/logo.svg" alt="NexTech Electronics Logo" class="Owner_Logo">
+                    <span class="brandName">NexTech Electronics</span>
+                </a>
+            </li>
+            <li class="navLinks">
+                <a href="/home">Home</a>
+                <a href="/products">Products</a>
+                <a href="/location">Locate Us <i style="color: #3b82f6;" class="fa-solid fa-location-crosshairs"></i></a>
+                <a href="/about">About Us</a>
+                <a href="/login">Log In <i style="color: #3b82f6;" class="fa-solid fa-right-to-bracket"></i></a>
+            </li>
+        </ul>
+    </nav>
+</body>
+</html>

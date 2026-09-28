@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8" />
+	<title>NexTech Electronics : HOME</title>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+	<link rel="stylesheet" href="" th:href="@{/css/Navigation.css}" />
+	<link rel="stylesheet" href="" th:href="@{/css/Home.css}" />
+</head>
+
+<body>
+	<nav th:replace="~{Navigation::navbar()}"></nav>
+	<div class="background">
+		<img src="/Images/hero-electronics.svg" alt="Electronics devices illustration" />
+		<div class="text">
+			<h1>Welcome to NexTech Electronics</h1>
+			<p>Quality gadgets, honest prices. Browse laptops, smartphones, audio gear and accessories picked for everyday life.</p>
+			<a href="/products" class="cta">Shop Products</a>
+		</div>
+	</div>
+</body>
+
+</html>

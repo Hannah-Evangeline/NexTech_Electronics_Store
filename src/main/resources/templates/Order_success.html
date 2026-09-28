@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8" />
+	<title>NexTech Electronics : ORDER PLACED</title>
+	<link rel="stylesheet" href="" th:href="@{/css/Order_success.css}" />
+</head>
+
+<body>
+	<a href="/product/back" class="back">Back</a>
+	<div class="text">
+		<h4>Order placed successfully!</h4>
+		<h3>Your purchase amount is: <span th:text="'₹ '+${amount}+'/-'"></span></h3>
+	</div>
+</body>
+
+</html>

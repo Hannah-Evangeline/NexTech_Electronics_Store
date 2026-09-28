@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8" />
+	<title>NexTech Electronics : ADD PRODUCT</title>
+	<link rel="stylesheet" href="" th:href="@{/css/Add_Product.css}" />
+</head>
+
+<body>
+	<a href="/services">Back to Services</a>
+	<div class="addProducts">
+		<h3 style="font-weight: bolder;color: seagreen;">ADD NEW PRODUCT :</h3>
+		<form action="" th:action="@{/addingProduct}" method="post">
+			Product_Name :
+			<input type="text" name="pname" value="" placeholder="e.g. Wireless Bluetooth Headphones" /> <br />
+			Product_Price :
+			<input type="text" name="pprice" placeholder="e.g. 2499" /><br />
+			Product_Desc : <br />
+			<textarea name="pdescription" id="" cols="15" rows="1"
+				placeholder="e.g. Over-ear headphones with 30hr battery life"></textarea><br />
+
+			<button type="submit">Add_Product</button>
+
+		</form>
+	</div>
+</body>
+
+</html>
